@@ -1,0 +1,40 @@
+
+/* styles.css */
+:root{
+  --lilac-50: #f5eef9;
+  --lilac-100: #e8dff3;
+  --lilac-500: #c9a3e6; /* primary lilac */
+  --lilac-700: #a67ad1;
+  --muted: #555555;
+  --bg: #ffffff;
+  --max-width: 980px;
+}
+
+*{box-sizing:border-box}
+body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:var(--muted); background:var(--lilac-50)}
+.container{max-width:var(--max-width); margin:0 auto; padding:1rem}
+.site-header{background:linear-gradient(180deg,var(--lilac-100),var(--lilac-50)); border-bottom:1px solid rgba(0,0,0,0.06)}
+.header-grid{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.profile{display:flex; gap:1rem; align-items:center}
+.profile-photo{width:110px; height:110px; object-fit:cover; border-radius:12px; border:4px solid var(--lilac-500); background:linear-gradient(45deg,var(--lilac-50),#fff)}
+.name-block h1{margin:.1rem 0; color: #3a0f4f}
+.headline{margin:0; font-size:.95rem; color:var(--muted)}
+.contacts{margin-top:.6rem; display:flex; gap:.5rem}
+.contact-btn{display:inline-block; padding:.4rem .7rem; border-radius:8px; text-decoration:none; font-weight:600; background:var(--lilac-500); color:#fff}
+.nav a{margin-left:1rem; text-decoration:none; color:var(--lilac-700); font-weight:600}
+
+main{padding:1.25rem 0}
+.card{background:linear-gradient(180deg,#fff, var(--lilac-50)); border-radius:12px; padding:1rem; margin-bottom:1rem; box-shadow:0 6px 18px rgba(50,10,60,0.05)}
+.skills-list{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:.5rem; list-style:none; padding:0; margin:0}
+.skills-list li{background:rgba(166,122,209,0.12); padding:.5rem .75rem; border-radius:8px}
+.experience-item{margin-bottom:.75rem}
+.contact-card a{color:var(--lilac-700); font-weight:600}
+
+.site-footer{padding:.9rem 0; text-align:center}
+
+/* Responsive */
+@media (max-width:720px){
+  .header-grid{flex-direction:column; align-items:flex-start}
+  .nav{width:100%; display:flex; gap:.6rem; flex-wrap:wrap}
+  .profile-photo{width:90px; height:90px}
+}
